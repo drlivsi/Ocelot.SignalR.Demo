@@ -57,7 +57,7 @@
           </elementProp>
           <stringProp name="HTTPSampler.domain">localhost</stringProp>
           <stringProp name="HTTPSampler.port">9500</stringProp>
-          <stringProp name="HTTPSampler.path">sample1/chat/negotiate</stringProp>
+          <stringProp name="HTTPSampler.path">hubs/chat/negotiate</stringProp>
           <stringProp name="HTTPSampler.method">POST</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
@@ -82,7 +82,7 @@
           <boolProp name="TLS">false</boolProp>
           <stringProp name="server">localhost</stringProp>
           <stringProp name="port">9500</stringProp>
-          <stringProp name="path">sample1/chat?id=${connectionId}</stringProp>
+          <stringProp name="path">hubs/chat?id=${connectionId}</stringProp>
           <stringProp name="connectTimeout">20000</stringProp>
           <boolProp name="binaryPayload">false</boolProp>
           <stringProp name="requestData">{&quot;protocol&quot;:&quot;json&quot;,&quot;version&quot;:1}&#x1e;</stringProp>

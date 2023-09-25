@@ -19,7 +19,7 @@
         "Key": "LbCookie",
         "Expiry": 1800000
       },
-      "UpstreamPathTemplate": "/sample1/{everything}",
+      "UpstreamPathTemplate": "/hubs/{everything}",
       "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE", "OPTIONS" ]
     }
   ],

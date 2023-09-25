@@ -5,8 +5,6 @@ Example of using the Ocelot Api and a pair of SignalR hubs behind a load balance
 
 **🛠️ Implementation**
 
-For example, I used the MassTransit SignalR demo https://github.com/MassTransit/Sample-SignalR and added some features:
-
 - Clients: ASP.NET Core MVC applications + Apache JMeter
 - API Gateway: Ocelot https://github.com/ThreeMammals/Ocelot
 - Load Balancer: Ocelot Load Balancer with type "CookieStickySessions"
@@ -25,7 +23,7 @@ http://localhost:15672/ (guest/guest)
 
 Just for testing, try sending a POST request through the API Gateway using Postman: 
 
-http://localhost:9500/sample1/chat/negotiate
+http://localhost:9500/hubs/chat/negotiate
 
 Open both web clients and try to send some messages:
 

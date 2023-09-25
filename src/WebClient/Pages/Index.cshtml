@@ -28,7 +28,7 @@
 
             // Start the connection.
             var connection = new signalR.HubConnectionBuilder()
-                .withUrl('http://localhost:9500/sample1/chat')
+                .withUrl('http://localhost:9500/hubs/chat')
                 .build();
 
             // Create a function that the hub can call to broadcast messages.
