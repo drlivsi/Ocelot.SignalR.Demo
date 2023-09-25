@@ -1,5 +1,5 @@
 # Ocelot.SignalR.Demo
-Example of using the Ocelot Api and a pair of SignalR hubs behind a load balancer with a MassTransit RabbitMQ backplane.
+Example of using the Ocelot Api Gateway and SignalR hubs behind a load balancer with a MassTransit RabbitMQ backplane.
 
 ![Ocelot.SignalR.Demo](/res/images/architecture.jpg?raw=true "Ocelot.SignalR.Demo")
 
