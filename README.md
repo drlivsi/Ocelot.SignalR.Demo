@@ -1,6 +1,10 @@
 # Ocelot.SignalR.Demo
 Example of using the Ocelot Api and a pair of SignalR hubs behind a load balancer with a MassTransit RabbitMQ backplane.
 
+![Ocelot.SignalR.Demo](/res/architecture.jpg?raw=true "Ocelot.SignalR.Demo")
+
+
+
 **🛠️ Implementation**
 
 - Clients: ASP.NET Core MVC applications + Apache JMeter
@@ -34,3 +38,4 @@ Each web client should create a cookie LbCookie. Load Balancer (on the Ocelot Ap
 MassTransit Backplane will take care of combining both Hubs.
 
 **🚀 Testing using Apache JMeter**
+Download and run the TestPlan https://github.com/drlivsi/Ocelot.SignalR.Demo/blob/main/res/JMeter/OcelotSignalR.jmx, check the API Gateway logs again.
