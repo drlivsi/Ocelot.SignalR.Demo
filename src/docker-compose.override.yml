@@ -1,0 +1,35 @@
+version: '3.4'
+
+services:
+  apigateway:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:80
+    ports:
+        - 9500:80
+ 
+  hub1:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "5200:80"       
+  
+  hub2:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "5201:80"  
+
+  webclient1:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "5000:80" 
+
+  webclient2:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "5001:80" 
+
+

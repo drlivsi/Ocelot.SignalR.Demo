@@ -1,0 +1,13 @@
+{
+  "profiles": {
+    "Docker Compose": {
+      "commandName": "DockerCompose",
+      "commandVersion": "1.0",
+      "serviceActions": {
+        "samplesignalr.mvc": "StartDebugging",
+        "apigateway": "StartDebugging",
+        "webclient": "StartDebugging"
+      }
+    }
+  }
+}

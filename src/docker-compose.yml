@@ -1,0 +1,58 @@
+version: '3.4'
+
+services:
+  apigateway:
+    container_name: apigateway
+    image: ${DOCKER_REGISTRY-}apigateway
+    build:
+      context: .
+      dockerfile: ApiGateway/Dockerfile
+    depends_on:
+      - hub1
+      - hub2
+
+  hub1:
+    container_name: hub1
+    image: ${DOCKER_REGISTRY-}hub 
+    build:
+        context: .
+        dockerfile: hub/Dockerfile       
+    depends_on:
+      - rabbitmq
+
+  hub2:
+    container_name: hub2
+    image: ${DOCKER_REGISTRY-}hub 
+    build:
+        context: .
+        dockerfile: hub/Dockerfile       
+    depends_on:
+      - rabbitmq
+
+  rabbitmq:
+    container_name: dev-rabbitmq
+    hostname: rabbit
+    image: rabbitmq:3-management
+    ports:
+     - "5672:5672"
+     - "15672:15672"
+    healthcheck:
+        test: ["CMD", "curl", "-f", "http://localhost:15672"]
+        interval: 30s
+        timeout: 10s
+        retries: 5
+
+  webclient1:
+    container_name: webclient1
+    image: ${DOCKER_REGISTRY-}webclient
+    build:
+      context: .
+      dockerfile: WebClient/Dockerfile
+
+  webclient2:
+    container_name: webclient2
+    image: ${DOCKER_REGISTRY-}webclient
+    build:
+      context: .
+      dockerfile: WebClient/Dockerfile
+

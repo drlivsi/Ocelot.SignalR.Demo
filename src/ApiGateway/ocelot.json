@@ -1,0 +1,27 @@
+﻿{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/{everything}",
+      "ReRouteIsCaseSensitive": false,
+      "DownstreamScheme": "ws",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "hub1",
+          "Port": 80
+        },
+        {
+          "Host": "hub2",
+          "Port": 80
+        }        
+      ],
+      "LoadBalancerOptions": {
+        "Type": "CookieStickySessions",
+        "Key": "LbCookie",
+        "Expiry": 1800000
+      },
+      "UpstreamPathTemplate": "/sample1/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE", "OPTIONS" ]
+    }
+  ],
+  "GlobalConfiguration": {}
+}
