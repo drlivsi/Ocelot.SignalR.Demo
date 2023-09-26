@@ -30,7 +30,7 @@ Open both web clients and try to send some messages:
 - first browser: http://localhost:5000/
 - second browser: http://localhost:5001/
 
-Each web client should create a cookie LbCookie. Load Balancer (on the Ocelot Api Gateway side) will route each request using this Cookie to the appropriate SignalR Hub. Do not forget to check the API Gateway logs:
+Each web client should create a cookie LbCookie. Load Balancer (on the Ocelot Api Gateway side) will route each request using LbCookie to the appropriate SignalR Hub. Do not forget to check the API Gateway logs:
 - message: 200 (OK) status code, request uri: ws://hub1/chat/negotiate
 - message: 200 (OK) status code, request uri: ws://hub2/chat/negotiate
 
